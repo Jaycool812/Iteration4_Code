@@ -1,4 +1,4 @@
-from scipy.interpolate import interp1d
+# from scipy.interpolate import interp1d
 
 try:
     from pyspark.sql.types import NumericType
@@ -405,7 +405,7 @@ class Histogram(object):
                                               weights=bin_values,
                                               density=True
                                               )
-            interpolation_function = interp1d(bin_centers, normed_values, kind='quadratic')
+#             interpolation_function = interp1d(bin_centers, normed_values, kind='quadratic')
 
             power_smooth.append(x_new)
             power_smooth.append(interpolation_function(x_new))
